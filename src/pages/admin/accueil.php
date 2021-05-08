@@ -1,0 +1,2 @@
+<?php
+$title = "Admin panel";

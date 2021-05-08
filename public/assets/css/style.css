@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* id */
+
+#sidebarCollapse {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+#btn-return {
+  float: inline-end;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+#menuLogo {
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-size: 190px;
+  margin: auto;
+  margin-top: 10px;
+}
+/* class */
+
+.container {
+  margin: auto;
+  min-height: 100vh;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 150px;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+.card_body {
+  display: flex;
+  width: 90%;
+  height: 90px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.card_info {
+  width: 45%;
+  height: 90px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card_logo {
+  width: 55%;
+  height: 90px;
+}
+.card_logo img {
+  width: 100%;
+  height: 90px;
+}
+.card_footer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 0;
+  padding: 0;
+}
+.card_footer label {
+  margin-left: 5px;
+}
+.card_footer progress {
+  margin: auto;
+}
+.graph {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  padding-top: 10px;
+  justify-content: center;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+.graph label {
+  margin-left: 5px;
+  font-size: 24px;
+  color: white;
+}
+.diag {
+  fill: gainsboro;
+}
+.graph_stroke {
+  stroke-width: 2px;
+  stroke: #000;
+  fill: transparent;
+}
+.graph_x text {
+  fill: black;
+  stroke: transparent;
+  text-anchor: middle;
+}
+.graph_y text {
+  fill: black;
+  stroke: transparent;
+  text-anchor: middle;
+}
+.graph_line {
+  stroke: skyblue;
+  fill: transparent;
+  stroke-width: 4px;
+}
+.graph_line_find {
+  stroke: transparent;
+  fill: #4184ff;
+}
+.todo {
+  min-width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.todo ul {
+  list-style-type: none;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+.todo ul li {
+  background-color: rgb(233, 232, 232);
+  border-bottom: 1px solid black;
+  transition: 1s;
+}
+.todo ul li.active {
+  background-color: #717bff;
+}
+.todo ul li:hover.active {
+  background-color: #717bff;
+}
+.todo ul li:hover {
+  background-color: lightgrey;
+  border-bottom: 1px solid black;
+}
+.todo ul li a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  height: 20px;
+  width: 80%;
+  text-align: center;
+  font-size: 28px;
+}
+
+.todo ul li img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-left: 1px;
+  margin-top: 4px;
+}
+.navigation {
+  display: block;
+  position: fixed;
+  z-index: 500;
+  width: 250px;
+  height: 100vh;
+  border-right: 1px solid black;
+}
+.navigation ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.navigation ul li {
+  width: 100%;
+  height: 30px;
+  background-color: #717bff;
+  text-align: center;
+}
+.navigation ul li:hover {
+  background-color: grey;
+  transition: 0.4s;
+}
+.navigation ul li a {
+  display: block;
+  width: 100%;
+  height: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding-top: 3px;
+}
+.navigation2 {
+  display: block;
+  position: fixed;
+  z-index: 400;
+  width: 40px;
+  height: 100vh;
+  border-right: 1px solid black;
+}
+.disable {
+  display: none;
+  transition: 1s;
+}
+.content {
+  display: block;
+  position: absolute;
+  width: 50px;
+}
+.btn {
+  min-width: 150px;
+  height: 42px;
+  background-color: grey;
+  color: #000;
+  border: 1px solid black;
+  border-radius: 0 21px 21px 0;
+  padding-left: 2px;
+  padding-right: 1px;
+  font-size: 18px;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: rgb(173, 169, 169);
+  transition: 0.4s;
+}
+.add_devise {
+  height: 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  margin-right: -3px;
+}
+.mt-1 {
+  margin-top: 10px;
+}
+.bg-orange {
+  background-color: orange;
+}
+.bg-bluelight {
+  background-color: rgb(111, 200, 235);
+}
+.bg-blue {
+  background-color: #717bff;
+}
+.bg-gray {
+  background-color: rgb(197, 197, 197);
+}
+/* Element */
+body {
+  background-color: silver;
+}
+progress {
+  background-color: #f3f3f3;
+  border: 0;
+  height: 12px;
+  border-radius: 9px;
+  width: 80%;
+}
+progress::-moz-progress-bar {
+  background-color: #b6651a;
+  border: 0;
+  height: 12px;
+  border-radius: 9px;
+  width: 80%;
+}
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border: 0;
+  height: 12px;
+  border-radius: 9px;
+  width: 80%;
+}
+progress::-webkit-progress-value {
+  background-color: #c7611d;
+  border: 0;
+  height: 12px;
+  border-radius: 9px;
+  width: 80%;
+}
+strong {
+  font-family: "Lora", serif;
+}
+/* Small */
+@media (max-width: 576px) {
+  .container {
+    min-width: 545px;
+  }
+  .navigation2 {
+    z-index: inherit;
+  }
+  .graph {
+    margin-left: 125px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 575px;
+  }
+  .navigation2 {
+    z-index: inherit;
+  }
+  .graph {
+    margin-left: 125px;
+  }
+}
+
+/* Medium */
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .graph {
+    margin-left: 0;
+  }
+  .todo {
+    min-width: 550px;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    display: none;
+  }
+  .graph {
+    margin-left: 0;
+  }
+  .todo {
+    min-width: 550px;
+  }
+}
+
+/* Large */
+@media (min-width: 992px) {
+  .container {
+    width: 890px;
+  }
+  .graph {
+    margin-left: 0;
+  }
+  .todo {
+    min-width: 550px;
+  }
+}
+
+/* Extra large */
+@media (min-width: 1280px) {
+  .container {
+    width: 1140px;
+  }
+  .graph {
+    margin-left: 0;
+  }
+}
